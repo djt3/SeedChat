@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.deps.json
+C:\Users\user\source\repos\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.dll
+C:\Users\user\source\repos\SeedChat\SeedChat\bin\Debug\net5.0\ref\SeedChat.dll
+C:\Users\user\source\repos\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.pdb
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.AssemblyInfo.cs
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.dll
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\ref\SeedChat.dll
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.pdb
+C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csprojAssemblyReference.cache

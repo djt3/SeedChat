@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+package SeedChat;
+
+service ChatServer {
+	rpc Ping(EmptyMessage) returns(CodedResponse) {}
+
+	rpc RequestSeed(SeedRequest) returns(CodedResponse) {}
+	rpc RequestStore(StoreRequest) returns(CodedResponse) {}
+
+	rpc GetNodes(EmptyMessage) returns(stream NodeResponse) {}
+}
+
+message EmptyMessage {}
+
+message StoreRequest {
+	string NodeAddress = 1;
+}
+
+message SeedRequest {
+	string NodeAddress = 1;
+	uint32 Bounces = 2;
+	uint64 ClientId = 3;
+}
+
+message CodedResponse {
+	uint32 Code = 1;
+}
+
+message NodeResponse {
+	string Address = 1;
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "1mmoNOUoP4FLmKjSO8+vLExzxKfd/qGdfs0BEyKifjRdjLBTatCSueeCxLzPnIfXgvwCd6VNp0JFYfPCj07X5A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\SeedChat\\SeedChat\\SeedChat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.16.0-rc1\\google.protobuf.3.16.0-rc1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\grpc.core\\2.37.1\\grpc.core.2.37.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\grpc.core.api\\2.37.1\\grpc.core.api.2.37.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\grpc.tools\\2.37.1\\grpc.tools.2.37.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
