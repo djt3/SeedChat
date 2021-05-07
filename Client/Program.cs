@@ -58,7 +58,18 @@ namespace SeedChatClient
                 Console.WriteLine("failed to initialized client");
             }
 
-            Console.ReadLine();
+            Console.WriteLine("enter id to send to:");
+            UInt64 id = UInt64.Parse(Console.ReadLine());
+
+            while(true)
+            {
+                string message = Console.ReadLine();
+
+                foreach (Node node in Client.nodes) 
+                {
+                    node.client.SendMessage(new Message { MessageType = 1, Message_ = "hi", ToId = id });
+                }
+            }
 
             server.ShutdownAsync().Wait();
         }

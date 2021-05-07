@@ -7,6 +7,8 @@ service ChatServer {
 	rpc RequestSeed(SeedRequest) returns(CodedResponse) {}
 	rpc RequestStore(StoreRequest) returns(CodedResponse) {}
 
+	rpc SendMessage(Message) returns(CodedResponse) {}
+
 	rpc GetNodes(EmptyMessage) returns(stream NodeResponse) {}
 }
 
@@ -20,6 +22,12 @@ message SeedRequest {
 	string NodeAddress = 1;
 	uint32 Bounces = 2;
 	uint64 ClientId = 3;
+}
+
+message Message {
+	uint64 ToId = 1;
+	uint32 MessageType = 2;
+	string Message = 3;
 }
 
 message CodedResponse {

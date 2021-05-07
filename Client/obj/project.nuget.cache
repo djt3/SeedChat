@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hS3OQq4tgvObrul6svserinC95YiX8rB6qax+ysgbjrtvdenTs5VKtnDW6qmASC2VhEC49S9w3rc183N7TvyDw==",
+  "dgSpecHash": "XUdHMhAv2C8Do3XdlZ5gOPGKMZRgAhfBUkTmx4ZfM7p5as06EFy06f8FhWvGYorWeq0CV/g5yku4GDuS55+Tdg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\SeedChatClient.csproj",
+  "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.16.0-rc1\\google.protobuf.3.16.0-rc1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\grpc.core\\2.37.1\\grpc.core.2.37.1.nupkg.sha512",

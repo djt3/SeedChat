@@ -46,6 +46,7 @@ namespace SeedChat {
     static readonly grpc::Marshaller<global::SeedChat.CodedResponse> __Marshaller_SeedChat_CodedResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SeedChat.CodedResponse.Parser));
     static readonly grpc::Marshaller<global::SeedChat.SeedRequest> __Marshaller_SeedChat_SeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SeedChat.SeedRequest.Parser));
     static readonly grpc::Marshaller<global::SeedChat.StoreRequest> __Marshaller_SeedChat_StoreRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SeedChat.StoreRequest.Parser));
+    static readonly grpc::Marshaller<global::SeedChat.Message> __Marshaller_SeedChat_Message = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SeedChat.Message.Parser));
     static readonly grpc::Marshaller<global::SeedChat.NodeResponse> __Marshaller_SeedChat_NodeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::SeedChat.NodeResponse.Parser));
 
     static readonly grpc::Method<global::SeedChat.EmptyMessage, global::SeedChat.CodedResponse> __Method_Ping = new grpc::Method<global::SeedChat.EmptyMessage, global::SeedChat.CodedResponse>(
@@ -67,6 +68,13 @@ namespace SeedChat {
         __ServiceName,
         "RequestStore",
         __Marshaller_SeedChat_StoreRequest,
+        __Marshaller_SeedChat_CodedResponse);
+
+    static readonly grpc::Method<global::SeedChat.Message, global::SeedChat.CodedResponse> __Method_SendMessage = new grpc::Method<global::SeedChat.Message, global::SeedChat.CodedResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SendMessage",
+        __Marshaller_SeedChat_Message,
         __Marshaller_SeedChat_CodedResponse);
 
     static readonly grpc::Method<global::SeedChat.EmptyMessage, global::SeedChat.NodeResponse> __Method_GetNodes = new grpc::Method<global::SeedChat.EmptyMessage, global::SeedChat.NodeResponse>(
@@ -97,6 +105,11 @@ namespace SeedChat {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::SeedChat.CodedResponse> RequestStore(global::SeedChat.StoreRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SeedChat.CodedResponse> SendMessage(global::SeedChat.Message request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -179,6 +192,22 @@ namespace SeedChat {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RequestStore, null, options, request);
       }
+      public virtual global::SeedChat.CodedResponse SendMessage(global::SeedChat.Message request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SendMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SeedChat.CodedResponse SendMessage(global::SeedChat.Message request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SendMessage, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SeedChat.CodedResponse> SendMessageAsync(global::SeedChat.Message request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SendMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SeedChat.CodedResponse> SendMessageAsync(global::SeedChat.Message request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SendMessage, null, options, request);
+      }
       public virtual grpc::AsyncServerStreamingCall<global::SeedChat.NodeResponse> GetNodes(global::SeedChat.EmptyMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -202,6 +231,7 @@ namespace SeedChat {
           .AddMethod(__Method_Ping, serviceImpl.Ping)
           .AddMethod(__Method_RequestSeed, serviceImpl.RequestSeed)
           .AddMethod(__Method_RequestStore, serviceImpl.RequestStore)
+          .AddMethod(__Method_SendMessage, serviceImpl.SendMessage)
           .AddMethod(__Method_GetNodes, serviceImpl.GetNodes).Build();
     }
 
@@ -214,6 +244,7 @@ namespace SeedChat {
       serviceBinder.AddMethod(__Method_Ping, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SeedChat.EmptyMessage, global::SeedChat.CodedResponse>(serviceImpl.Ping));
       serviceBinder.AddMethod(__Method_RequestSeed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SeedChat.SeedRequest, global::SeedChat.CodedResponse>(serviceImpl.RequestSeed));
       serviceBinder.AddMethod(__Method_RequestStore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SeedChat.StoreRequest, global::SeedChat.CodedResponse>(serviceImpl.RequestStore));
+      serviceBinder.AddMethod(__Method_SendMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::SeedChat.Message, global::SeedChat.CodedResponse>(serviceImpl.SendMessage));
       serviceBinder.AddMethod(__Method_GetNodes, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::SeedChat.EmptyMessage, global::SeedChat.NodeResponse>(serviceImpl.GetNodes));
     }
 

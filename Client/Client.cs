@@ -76,7 +76,7 @@ namespace SeedChatClient
                     if (ContainsNodeAddress(address) || address == "localhost:" + Client.port)
                         continue;
 
-                    nodes.Add(new Node(address));
+                    //nodes.Add(new Node(address));
                 }
             }
         }
@@ -118,7 +118,7 @@ namespace SeedChatClient
                 }
             }
 
-            GrowNodeList().Wait();
+            //GrowNodeList().Wait();
 
             nodes[0].RequestSeed();
 

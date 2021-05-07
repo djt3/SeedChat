@@ -13,7 +13,6 @@ namespace SeedChatClient
     {
         public static ConcurrentDictionary<UInt64, List<Node>> routeTable = new ConcurrentDictionary<UInt64, List<Node>>();
 
-
         public override Task<CodedResponse> Ping(EmptyMessage message, ServerCallContext context)
         {
             Console.WriteLine($"recieved ping from {context.Peer}");
@@ -35,7 +34,22 @@ namespace SeedChatClient
 
         public override Task<CodedResponse> RequestSeed(SeedRequest request, ServerCallContext context)
         {
+            if (Client.id == request.ClientId)
+                return Task.FromResult(new CodedResponse { Code = 1 });
+
             Console.WriteLine($"recieved seed request for {request.ClientId}");
+
+            if (!Client.ContainsNodeAddress(request.NodeAddress))
+            {
+                Client.nodes.Add(new Node(request.NodeAddress));
+            }
+
+            if (!routeTable.ContainsKey(request.ClientId))
+            {
+                routeTable[request.ClientId] = new List<Node>();
+            }
+
+            routeTable[request.ClientId].Add(Client.GetNodeWithAddress(request.NodeAddress));
 
             if (request.Bounces++ < 3)
             {
@@ -43,16 +57,24 @@ namespace SeedChatClient
 
                 foreach (Node node in Client.nodes)
                 {
-                    node.client.RequestSeed(request);
+                    node.client.RequestSeedAsync(request);
                 }
             }
 
-            if (!Client.ContainsNodeAddress(request.NodeAddress))
-            {
-                Client.nodes.Add(new Node(request.NodeAddress));
-            }
+            return Task.FromResult(new CodedResponse { Code = 1 });
+        }
 
-            routeTable[request.ClientId].Add(Client.GetNodeWithAddress(request.NodeAddress));
+        public override Task<CodedResponse> SendMessage(Message message, ServerCallContext context)
+        {
+            if (!routeTable.ContainsKey(message.ToId))
+                return Task.FromResult(new CodedResponse { Code = 0 });
+
+            Console.WriteLine($"recieved message {message.Message_} for {message.ToId}");
+
+            foreach (Node node in routeTable[message.ToId])
+            {
+                node.client.SendMessageAsync(message);
+            }
 
             return Task.FromResult(new CodedResponse { Code = 1 });
         }

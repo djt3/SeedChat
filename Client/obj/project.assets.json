@@ -294,24 +294,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\SeedChatClient.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj",
       "projectName": "SeedChatClient",
-      "projectPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\SeedChatClient.csproj",
+      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\obj\\",
+      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -325,8 +320,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Users\\user\\Documents\\Github\\SeedChat\\SeedChat\\SeedChat.csproj": {
-              "projectPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\SeedChat\\SeedChat.csproj"
+            "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj": {
+              "projectPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj"
             }
           }
         }
@@ -375,7 +370,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
