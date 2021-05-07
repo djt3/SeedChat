@@ -65,6 +65,27 @@
           "build/Grpc.Tools.targets": {}
         }
       },
+      "PgpCore/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.9"
+        },
+        "compile": {
+          "lib/netstandard2.0/PgpCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PgpCore.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -209,6 +230,33 @@
         "tools/windows_x86/protoc.exe"
       ]
     },
+    "PgpCore/5.2.0": {
+      "sha512": "NWuMzPQusUOB5dQYmPDUsVaFOhQ/D8DNDBH1m83qvAJvB2zPNi57vk/jjT0f3h2yFYoi3b66zrqPyUFZfta4yA==",
+      "type": "package",
+      "path": "pgpcore/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PgpCore.dll",
+        "pgpcore.5.2.0.nupkg.sha512",
+        "pgpcore.nuspec"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.9.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -241,23 +289,29 @@
       "Google.Protobuf >= 3.16.0-rc1",
       "Grpc.Core >= 2.37.1",
       "Grpc.Tools >= 2.37.1",
+      "PgpCore >= 5.2.0",
       "SeedChat >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\SeedChat\\Client\\SeedChatClient.csproj",
+      "projectUniqueName": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\SeedChatClient.csproj",
       "projectName": "SeedChatClient",
-      "projectPath": "C:\\Users\\user\\source\\repos\\SeedChat\\Client\\SeedChatClient.csproj",
+      "projectPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\SeedChatClient.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\SeedChat\\Client\\obj\\",
+      "outputPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\Client\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -271,8 +325,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\user\\source\\repos\\SeedChat\\SeedChat\\SeedChat.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\SeedChat\\SeedChat\\SeedChat.csproj"
+            "D:\\Users\\user\\Documents\\Github\\SeedChat\\SeedChat\\SeedChat.csproj": {
+              "projectPath": "D:\\Users\\user\\Documents\\Github\\SeedChat\\SeedChat\\SeedChat.csproj"
             }
           }
         }
@@ -300,6 +354,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.37.1, )"
+          },
+          "PgpCore": {
+            "target": "Package",
+            "version": "[5.2.0, )"
           }
         },
         "imports": [
@@ -317,7 +375,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

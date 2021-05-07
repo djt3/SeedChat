@@ -11,6 +11,7 @@
           "Google.Protobuf": "3.16.0-rc1",
           "Grpc.Core": "2.37.1",
           "Grpc.Tools": "2.37.1",
+          "PgpCore": "5.2.0",
           "SeedChat": "1.0.0"
         },
         "runtime": {
@@ -76,6 +77,25 @@
         }
       },
       "Grpc.Tools/2.37.1": {},
+      "PgpCore/5.2.0": {
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PgpCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.9.1"
+          }
+        }
+      },
       "System.Memory/4.5.3": {},
       "SeedChat/1.0.0": {
         "dependencies": {
@@ -121,6 +141,20 @@
       "sha512": "sha512-3ePtAWBOXx+UR4JGp3PVxOFo2UP4IvjHOzrjgXCv5Qwgk6Lu4QH9DsKrr17xQyPJcaKMSu/P64mPWlEM8VkIeQ==",
       "path": "grpc.tools/2.37.1",
       "hashPath": "grpc.tools.2.37.1.nupkg.sha512"
+    },
+    "PgpCore/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NWuMzPQusUOB5dQYmPDUsVaFOhQ/D8DNDBH1m83qvAJvB2zPNi57vk/jjT0f3h2yFYoi3b66zrqPyUFZfta4yA==",
+      "path": "pgpcore/5.2.0",
+      "hashPath": "pgpcore.5.2.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "path": "portable.bouncycastle/1.8.9",
+      "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",

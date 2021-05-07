@@ -46,6 +46,8 @@ namespace SeedChatClient
 
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+            Messaging.Initialize();
+
             if (Client.Initialize())
             {
                 Console.WriteLine("initialized client");

@@ -10,3 +10,15 @@ C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.dll
 C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\ref\SeedChat.dll
 C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.pdb
 C:\Users\user\source\repos\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csprojAssemblyReference.cache
+D:\Users\user\Documents\Github\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.deps.json
+D:\Users\user\Documents\Github\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.dll
+D:\Users\user\Documents\Github\SeedChat\SeedChat\bin\Debug\net5.0\ref\SeedChat.dll
+D:\Users\user\Documents\Github\SeedChat\SeedChat\bin\Debug\net5.0\SeedChat.pdb
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csprojAssemblyReference.cache
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.AssemblyInfoInputs.cache
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.AssemblyInfo.cs
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csproj.CoreCompileInputs.cache
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.dll
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\ref\SeedChat.dll
+D:\Users\user\Documents\Github\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.pdb
