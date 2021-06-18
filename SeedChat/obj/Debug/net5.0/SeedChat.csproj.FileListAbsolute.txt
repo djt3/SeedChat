@@ -33,3 +33,4 @@ C:\Users\user\Documents\GitHub\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.cspro
 C:\Users\user\Documents\GitHub\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.dll
 C:\Users\user\Documents\GitHub\SeedChat\SeedChat\obj\Debug\net5.0\ref\SeedChat.dll
 C:\Users\user\Documents\GitHub\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.pdb
+C:\Users\user\Documents\GitHub\SeedChat\SeedChat\obj\Debug\net5.0\SeedChat.csprojAssemblyReference.cache

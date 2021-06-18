@@ -27,24 +27,25 @@ namespace SeedChat {
             "ChNQcm90b3MvU2VydmVyLnByb3RvEghTZWVkQ2hhdCIOCgxFbXB0eU1lc3Nh",
             "Z2UiIwoMU3RvcmVSZXF1ZXN0EhMKC05vZGVBZGRyZXNzGAEgASgJIkUKC1Nl",
             "ZWRSZXF1ZXN0EhMKC05vZGVBZGRyZXNzGAEgASgJEg8KB0JvdW5jZXMYAiAB",
-            "KA0SEAoIQ2xpZW50SWQYAyABKAQiPQoHTWVzc2FnZRIMCgRUb0lkGAEgASgE",
-            "EhMKC01lc3NhZ2VUeXBlGAIgASgNEg8KB01lc3NhZ2UYAyABKAkiHQoNQ29k",
-            "ZWRSZXNwb25zZRIMCgRDb2RlGAEgASgNIh8KDE5vZGVSZXNwb25zZRIPCgdB",
-            "ZGRyZXNzGAEgASgJMsgCCgpDaGF0U2VydmVyEjkKBFBpbmcSFi5TZWVkQ2hh",
-            "dC5FbXB0eU1lc3NhZ2UaFy5TZWVkQ2hhdC5Db2RlZFJlc3BvbnNlIgASPwoL",
-            "UmVxdWVzdFNlZWQSFS5TZWVkQ2hhdC5TZWVkUmVxdWVzdBoXLlNlZWRDaGF0",
-            "LkNvZGVkUmVzcG9uc2UiABJBCgxSZXF1ZXN0U3RvcmUSFi5TZWVkQ2hhdC5T",
-            "dG9yZVJlcXVlc3QaFy5TZWVkQ2hhdC5Db2RlZFJlc3BvbnNlIgASOwoLU2Vu",
-            "ZE1lc3NhZ2USES5TZWVkQ2hhdC5NZXNzYWdlGhcuU2VlZENoYXQuQ29kZWRS",
-            "ZXNwb25zZSIAEj4KCEdldE5vZGVzEhYuU2VlZENoYXQuRW1wdHlNZXNzYWdl",
-            "GhYuU2VlZENoYXQuTm9kZVJlc3BvbnNlIgAwAWIGcHJvdG8z"));
+            "KA0SEAoIQ2xpZW50SWQYAyABKAQiTQoHTWVzc2FnZRIMCgRUb0lkGAEgASgE",
+            "Eg4KBkZyb21JZBgCIAEoBBITCgtNZXNzYWdlVHlwZRgDIAEoDRIPCgdNZXNz",
+            "YWdlGAQgASgJIh0KDUNvZGVkUmVzcG9uc2USDAoEQ29kZRgBIAEoDSIfCgxO",
+            "b2RlUmVzcG9uc2USDwoHQWRkcmVzcxgBIAEoCTLIAgoKQ2hhdFNlcnZlchI5",
+            "CgRQaW5nEhYuU2VlZENoYXQuRW1wdHlNZXNzYWdlGhcuU2VlZENoYXQuQ29k",
+            "ZWRSZXNwb25zZSIAEj8KC1JlcXVlc3RTZWVkEhUuU2VlZENoYXQuU2VlZFJl",
+            "cXVlc3QaFy5TZWVkQ2hhdC5Db2RlZFJlc3BvbnNlIgASQQoMUmVxdWVzdFN0",
+            "b3JlEhYuU2VlZENoYXQuU3RvcmVSZXF1ZXN0GhcuU2VlZENoYXQuQ29kZWRS",
+            "ZXNwb25zZSIAEjsKC1NlbmRNZXNzYWdlEhEuU2VlZENoYXQuTWVzc2FnZRoX",
+            "LlNlZWRDaGF0LkNvZGVkUmVzcG9uc2UiABI+CghHZXROb2RlcxIWLlNlZWRD",
+            "aGF0LkVtcHR5TWVzc2FnZRoWLlNlZWRDaGF0Lk5vZGVSZXNwb25zZSIAMAFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.EmptyMessage), global::SeedChat.EmptyMessage.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.StoreRequest), global::SeedChat.StoreRequest.Parser, new[]{ "NodeAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.SeedRequest), global::SeedChat.SeedRequest.Parser, new[]{ "NodeAddress", "Bounces", "ClientId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.Message), global::SeedChat.Message.Parser, new[]{ "ToId", "MessageType", "Message_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.Message), global::SeedChat.Message.Parser, new[]{ "ToId", "FromId", "MessageType", "Message_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.CodedResponse), global::SeedChat.CodedResponse.Parser, new[]{ "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SeedChat.NodeResponse), global::SeedChat.NodeResponse.Parser, new[]{ "Address" }, null, null, null, null)
           }));
@@ -635,6 +636,7 @@ namespace SeedChat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Message(Message other) : this() {
       toId_ = other.toId_;
+      fromId_ = other.fromId_;
       messageType_ = other.messageType_;
       message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -656,8 +658,19 @@ namespace SeedChat {
       }
     }
 
+    /// <summary>Field number for the "FromId" field.</summary>
+    public const int FromIdFieldNumber = 2;
+    private ulong fromId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong FromId {
+      get { return fromId_; }
+      set {
+        fromId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "MessageType" field.</summary>
-    public const int MessageTypeFieldNumber = 2;
+    public const int MessageTypeFieldNumber = 3;
     private uint messageType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint MessageType {
@@ -668,7 +681,7 @@ namespace SeedChat {
     }
 
     /// <summary>Field number for the "Message" field.</summary>
-    public const int Message_FieldNumber = 3;
+    public const int Message_FieldNumber = 4;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message_ {
@@ -692,6 +705,7 @@ namespace SeedChat {
         return true;
       }
       if (ToId != other.ToId) return false;
+      if (FromId != other.FromId) return false;
       if (MessageType != other.MessageType) return false;
       if (Message_ != other.Message_) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -701,6 +715,7 @@ namespace SeedChat {
     public override int GetHashCode() {
       int hash = 1;
       if (ToId != 0UL) hash ^= ToId.GetHashCode();
+      if (FromId != 0UL) hash ^= FromId.GetHashCode();
       if (MessageType != 0) hash ^= MessageType.GetHashCode();
       if (Message_.Length != 0) hash ^= Message_.GetHashCode();
       if (_unknownFields != null) {
@@ -723,12 +738,16 @@ namespace SeedChat {
         output.WriteRawTag(8);
         output.WriteUInt64(ToId);
       }
-      if (MessageType != 0) {
+      if (FromId != 0UL) {
         output.WriteRawTag(16);
+        output.WriteUInt64(FromId);
+      }
+      if (MessageType != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(MessageType);
       }
       if (Message_.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Message_);
       }
       if (_unknownFields != null) {
@@ -744,12 +763,16 @@ namespace SeedChat {
         output.WriteRawTag(8);
         output.WriteUInt64(ToId);
       }
-      if (MessageType != 0) {
+      if (FromId != 0UL) {
         output.WriteRawTag(16);
+        output.WriteUInt64(FromId);
+      }
+      if (MessageType != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(MessageType);
       }
       if (Message_.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteString(Message_);
       }
       if (_unknownFields != null) {
@@ -763,6 +786,9 @@ namespace SeedChat {
       int size = 0;
       if (ToId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ToId);
+      }
+      if (FromId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FromId);
       }
       if (MessageType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MessageType);
@@ -783,6 +809,9 @@ namespace SeedChat {
       }
       if (other.ToId != 0UL) {
         ToId = other.ToId;
+      }
+      if (other.FromId != 0UL) {
+        FromId = other.FromId;
       }
       if (other.MessageType != 0) {
         MessageType = other.MessageType;
@@ -809,10 +838,14 @@ namespace SeedChat {
             break;
           }
           case 16: {
+            FromId = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             MessageType = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 34: {
             Message_ = input.ReadString();
             break;
           }
@@ -835,10 +868,14 @@ namespace SeedChat {
             break;
           }
           case 16: {
+            FromId = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             MessageType = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 34: {
             Message_ = input.ReadString();
             break;
           }

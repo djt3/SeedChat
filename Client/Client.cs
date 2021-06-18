@@ -24,7 +24,7 @@ namespace SeedChatClient
 
         public void RequestSeed()
         {
-            this.client.RequestSeed(new SeedRequest { Bounces = 0, ClientId = Client.id, NodeAddress = "locahost:" + Client.port });
+            this.client.RequestSeed(new SeedRequest { Bounces = 0, ClientId = Client.Id, NodeAddress = "localhost:" + Client.port });
         }
 
         public string address;
@@ -33,9 +33,17 @@ namespace SeedChatClient
 
     static class Client
     {
-        public static UInt64 id;
+        public static UInt64 Id;
         public static int port = 4242;
         public static List<Node> nodes = new List<Node>();
+
+        public static void BroadcastMessage(Message message)
+        {
+            foreach (Node node in nodes)
+            {
+                node.client.SendMessage(message);
+            }
+        }
 
         public static Node GetNodeWithAddress(string address)
         {
@@ -89,15 +97,18 @@ namespace SeedChatClient
 
             random.NextBytes(idArray);
 
-            id = BitConverter.ToUInt64(idArray);
+            Id = BitConverter.ToUInt64(idArray);
 
-            Console.WriteLine($"client id {id}");
+            Console.WriteLine($"client id {Id}");
 
             while (nodes.Count < 1)
             {
                 Console.WriteLine("enter a node address to enter the network:");
 
                 string address = Console.ReadLine();
+
+                if (ContainsNodeAddress(address))
+                    continue;
 
                 Node node = new Node(address);
 

@@ -34,7 +34,7 @@ namespace SeedChatClient
 
         public override Task<CodedResponse> RequestSeed(SeedRequest request, ServerCallContext context)
         {
-            if (Client.id == request.ClientId)
+            if (Client.Id == request.ClientId)
                 return Task.FromResult(new CodedResponse { Code = 1 });
 
             Console.WriteLine($"recieved seed request for {request.ClientId}");
@@ -53,7 +53,7 @@ namespace SeedChatClient
 
             if (request.Bounces++ < 3)
             {
-                request.NodeAddress = "localhost:" + Client.port;
+                request.NodeAddress = "127.0.0.1:" + Client.port;
 
                 foreach (Node node in Client.nodes)
                 {
@@ -66,6 +66,22 @@ namespace SeedChatClient
 
         public override Task<CodedResponse> SendMessage(Message message, ServerCallContext context)
         {
+            if (message.ToId == Client.Id)
+            {
+                if (message.MessageType == (uint)MessageTypes.Message)
+                {
+                    Console.WriteLine($"Them: {Messaging.DecryptMessage(message.FromId, message.Message_)}");
+                    return Task.FromResult(new CodedResponse { Code = 1 });
+                }
+
+                else if (message.MessageType == (uint)MessageTypes.KeyExchange)
+                {
+                    Console.WriteLine($"Recieved key exchange from {message.FromId}");
+
+                    Messaging.AddPublicKey(message.FromId, message.Message_);
+                }
+            }
+
             if (!routeTable.ContainsKey(message.ToId))
                 return Task.FromResult(new CodedResponse { Code = 0 });
 

@@ -32,6 +32,9 @@ namespace SeedChatClient
 
             pgp.GenerateKey(publicKeyStream, privateKeyStream);
 
+            publicKeyStream.Position = 0;
+            privateKeyStream.Position = 0;
+
             publicKey = StreamToString(publicKeyStream);
             privateKey = StreamToString(privateKeyStream);
 
@@ -46,6 +49,14 @@ namespace SeedChatClient
         public static string DecryptMessage(UInt64 id, string message)
         {
             return pgp.DecryptArmoredStringAndVerify(message, keys[id], privateKey, "");
+        }
+
+        public static void AddPublicKey(UInt64 id, string encKey)
+        {
+            if (keys.ContainsKey(id))
+                return;
+
+            keys.TryAdd(id, encKey);
         }
     }
 }
