@@ -26,7 +26,7 @@ message SeedRequest {
 
 message Message {
 	uint64 ToId = 1;
-	uint64 FromId = 2;
+	string FromId = 2;
 	uint32 MessageType = 3;
 	string Message = 4;
 }

@@ -61,13 +61,13 @@ namespace SeedChatClient
             Console.WriteLine("enter id to send to:");
             UInt64 id = UInt64.Parse(Console.ReadLine());
 
-            Client.BroadcastMessage(new Message { MessageType = (uint)MessageTypes.KeyExchange, Message_ = Messaging.publicKey, ToId = id, FromId = Client.Id });
+            Client.BroadcastMessage(new Message { MessageType = (uint)MessageTypes.KeyExchange, Message_ = Messaging.publicKey, ToId = id, FromId = Client.Id.ToString() });
 
             while (true)
             {
                 string message = Messaging.EncryptMessage(id, Console.ReadLine());
 
-                Client.BroadcastMessage(new Message { MessageType = (uint)MessageTypes.Message, Message_ = message, ToId = id, FromId = Client.Id });
+                Client.BroadcastMessage(new Message { MessageType = (uint)MessageTypes.Message, Message_ = message, ToId = id, FromId = Messaging.EncryptMessage(id, Client.Id.ToString()) });
                 Console.WriteLine($"You: {message}");
             }
 

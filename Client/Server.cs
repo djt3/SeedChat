@@ -78,7 +78,7 @@ namespace SeedChatClient
                 {
                     Console.WriteLine($"Recieved key exchange from {message.FromId}");
 
-                    Messaging.AddPublicKey(message.FromId, message.Message_);
+                    Messaging.AddPublicKey(UInt64.Parse(message.FromId), message.Message_);
                 }
             }
 

@@ -51,6 +51,16 @@ namespace SeedChatClient
             return pgp.DecryptArmoredStringAndVerify(message, keys[id], privateKey, "");
         }
 
+        public static string EncryptId(UInt64 forId, string id)
+        {
+            return pgp.EncryptArmoredString(id, keys[forId]);
+        }
+
+        public static string DecryptId(string id)
+        {
+            return pgp.DecryptArmoredString(id);
+        }
+
         public static void AddPublicKey(UInt64 id, string encKey)
         {
             if (keys.ContainsKey(id))
