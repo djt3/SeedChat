@@ -1,0 +1,4 @@
+C:\Users\user\Documents\GitHub\SeedChat\Client\obj\Debug\net5.0\SeedChatClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\SeedChat\Client\obj\Debug\net5.0\SeedChatClient.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\SeedChat\Client\obj\Debug\net5.0\SeedChatClient.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\SeedChat\Client\obj\Debug\net5.0\SeedChatClient.csproj.CoreCompileInputs.cache

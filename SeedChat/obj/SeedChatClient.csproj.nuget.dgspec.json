@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj": {}
+    "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj": {
+    "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj",
-        "projectName": "SeedChat",
-        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\SeedChat.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj",
+        "projectName": "SeedChatClient",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\SeedChatClient.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\SeedChat\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\SeedChat\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,10 +57,6 @@
             "PgpCore": {
               "target": "Package",
               "version": "[5.2.0, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.4.1, )"
             }
           },
           "imports": [

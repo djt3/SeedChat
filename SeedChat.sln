@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeedChatClient", "Client\SeedChatClient.csproj", "{D1C9309D-7BF0-45AD-8945-5308208995FA}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4DCA47D2-07AD-441B-A610-E7760F5DFD50} = {4DCA47D2-07AD-441B-A610-E7760F5DFD50}
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeedChat", "SeedChat\SeedChat.csproj", "{4DCA47D2-07AD-441B-A610-E7760F5DFD50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeedChat", "SeedChat\SeedChat.csproj", "{342ECC68-8F5A-4B00-98E8-91727A39D4A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,19 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D1C9309D-7BF0-45AD-8945-5308208995FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1C9309D-7BF0-45AD-8945-5308208995FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1C9309D-7BF0-45AD-8945-5308208995FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1C9309D-7BF0-45AD-8945-5308208995FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DCA47D2-07AD-441B-A610-E7760F5DFD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DCA47D2-07AD-441B-A610-E7760F5DFD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DCA47D2-07AD-441B-A610-E7760F5DFD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DCA47D2-07AD-441B-A610-E7760F5DFD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342ECC68-8F5A-4B00-98E8-91727A39D4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342ECC68-8F5A-4B00-98E8-91727A39D4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342ECC68-8F5A-4B00-98E8-91727A39D4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342ECC68-8F5A-4B00-98E8-91727A39D4A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7CBEDAC9-C228-4811-90D7-6BC8B8C929DF}
+		SolutionGuid = {C4E8074C-D3E6-4650-AFD6-5C5306B8AEAD}
 	EndGlobalSection
 EndGlobal
