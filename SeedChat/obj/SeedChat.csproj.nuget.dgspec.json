@@ -54,13 +54,25 @@
               "target": "Package",
               "version": "[2.37.1, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.10.0, )"
+            },
             "PgpCore": {
               "target": "Package",
               "version": "[5.2.0, )"
             },
+            "Xunit.Priority": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.3, )"
             }
           },
           "imports": [

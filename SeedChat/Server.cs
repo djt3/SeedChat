@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeedChatClient
+namespace SeedChat
 {
     class ChatServerImpl : ChatServer.ChatServerBase
     {
@@ -29,10 +29,7 @@ namespace SeedChatClient
         {
             Console.WriteLine($"recieved store request from {request.NodeAddress}");
 
-            if (!client.ContainsNodeAddress(request.NodeAddress))
-            {
-                client.nodes.Add(new Node(request.NodeAddress));
-            }
+            client.AddNode(request.NodeAddress);
 
             return Task.FromResult(new CodedResponse { Code = 1 });
         }
@@ -44,38 +41,14 @@ namespace SeedChatClient
 
             Console.WriteLine($"recieved seed request for {request.ClientId}");
 
-            client.AddNode(request.NodeAddress);
+            client.AddRoute(request.ClientId, request.NodeAddress);
 
             return Task.FromResult(new CodedResponse { Code = 1 });
         }
 
         public override Task<CodedResponse> SendMessage(Message message, ServerCallContext context)
         {
-            if (message.ToId == this.client.Id)
-            {
-                if (message.MessageType == (uint)MessageTypes.Message)
-                {
-                    Console.WriteLine($"Them: {Messaging.DecryptMessage(message.FromId, message.Message_)}");
-                    return Task.FromResult(new CodedResponse { Code = 1 });
-                }
-
-                else if (message.MessageType == (uint)MessageTypes.KeyExchange)
-                {
-                    Console.WriteLine($"Recieved key exchange from {message.FromId}");
-
-                    Messaging.AddPublicKey(UInt64.Parse(message.FromId), message.Message_);
-                }
-            }
-
-            if (!routeTable.ContainsKey(message.ToId))
-                return Task.FromResult(new CodedResponse { Code = 0 });
-
-            Console.WriteLine($"recieved message {message.Message_} for {message.ToId}");
-
-            foreach (Node node in routeTable[message.ToId])
-            {
-                node.Client.SendMessageAsync(message);
-            }
+            this.client.OnMessageRecieved(message);
 
             return Task.FromResult(new CodedResponse { Code = 1 });
         }
@@ -83,10 +56,10 @@ namespace SeedChatClient
         public override async Task GetNodes(EmptyMessage message, IServerStreamWriter<NodeResponse> response,
             ServerCallContext context)
         {
-            foreach (Node node in Client.nodes)
-            {
-                await response.WriteAsync(new NodeResponse { Address = node.Address });
-            }
+            //foreach (Node node in this..nodes)
+            //{
+            //await response.WriteAsync(new NodeResponse { Address = node.Address });
+            //}
         }
     }
 }

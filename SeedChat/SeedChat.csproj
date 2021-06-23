@@ -1,27 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Protos\Server.proto" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Protos\Server.proto" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.16.0-rc1" />
-    <PackageReference Include="Grpc.Core" Version="2.37.1" />
-    <PackageReference Include="Grpc.Tools" Version="2.37.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="PgpCore" Version="5.2.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Google.Protobuf" Version="3.16.0-rc1" />
+		<PackageReference Include="Grpc.Core" Version="2.37.1" />
+		<PackageReference Include="Grpc.Tools" Version="2.37.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+		<PackageReference Include="PgpCore" Version="5.2.0" />
+		<PackageReference Include="xunit" Version="2.4.1" />
+		<PackageReference Include="Xunit.Priority" Version="1.1.6" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Protobuf Include="Protos\Server.proto" />
-  </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\Server.proto" />
+	</ItemGroup>
 
 </Project>

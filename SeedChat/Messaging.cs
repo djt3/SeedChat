@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeedChatClient
+namespace SeedChat
 {
-    class Messaging
+    public class Messaging
     {
         PGP pgp = new PGP();
 
-        ConcurrentDictionary<UInt64, string> keys = new();
+        public ConcurrentDictionary<UInt64, string> Keys = new();
 
         string privateKey;
         public string PublicKey;
@@ -41,30 +41,38 @@ namespace SeedChatClient
 
         public string EncryptMessage(UInt64 id, string message)
         {
-            return this.pgp.EncryptArmoredStringAndSign(message, keys[id], privateKey, "");
+            return this.pgp.EncryptArmoredStringAndSign(message, Keys[id], privateKey, "");
         }
 
         public string DecryptMessage(UInt64 id, string message)
         {
-            return this.pgp.DecryptArmoredStringAndVerify(message, keys[id], privateKey, "");
+            return this.pgp.DecryptArmoredStringAndVerify(message, Keys[id], privateKey, "");
         }
 
         public string EncryptId(UInt64 forId, string id)
         {
-            return this.pgp.EncryptArmoredString(id, keys[forId]);
+            return this.pgp.EncryptArmoredString(id, Keys[forId]);
         }
 
-        public string DecryptId(string id)
+        public UInt64 DecryptId(string id)
         {
-            return this.pgp.DecryptArmoredString(id);
+            try
+            {
+                return UInt64.Parse(this.pgp.DecryptArmoredString(id, privateKey, ""));
+            }
+
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         public void AddPublicKey(UInt64 id, string encKey)
         {
-            if (this.keys.ContainsKey(id))
+            if (this.Keys.ContainsKey(id))
                 return;
 
-            this.keys.TryAdd(id, encKey);
+            this.Keys.TryAdd(id, encKey);
         }
     }
 }
